@@ -35,19 +35,15 @@ html {
 
 .card {
     display: grid;
-    grid-template-rows: subgrid;
-    grid-template-rows: auto auto auto auto;
+    grid-auto-rows: 200px auto auto auto auto auto auto auto;
     background-color: var(--white);
     padding: 1em;
     border: 1px solid var(--bg-lightgray);
+    gap: 1em;
 }
 
-/* header */
 
 .card__header {
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 3;
     position: relative;
 }
 
@@ -72,140 +68,134 @@ html {
     padding: 0.6em;
 }
 
-.card__header__thumbnail {
+.card__header__link {
     display: block;
-    justify-self: center;
+    height: 100%;
 }
 
-.card__header__menu {
+.card__header__thumbnail {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5em 0;
 }
 
-.card__header__menu img {
+.card__menu img {
     display: block;
     height: 16px;
 }
 
-.card__header__menu__left {
+.card__menu__left {
     display: flex; 
     gap: 5px; 
     align-items: center;
     text-decoration: none;
 }
 
-.card__header__menu__right {
+.card__menu__right {
     display: flex;
     gap: 5px;
 }
 
-.card__header__menu__left__rating {
+.card__menu__left__rating {
     color: var(--text-blue);
     font-weight: bold;
     font-size: 14px;
 }
 
-.card__header__menu__left__reviews {
+.card__menu__left__reviews {
     color: var(--text-lightgray);
     font-size: 12px;
     text-decoration: underline;
 }
 
-.card__header__button {
+.card__button {
     justify-self: center;
 }
 
-/* main */
-
-.card__main {
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 2;
-    margin-bottom: 2em;
-}
-
-.card__main__title {
+.card__title {
     color: var(--text-blue);
     font-weight: bold;
-    margin: 0.5em 0;
     text-decoration: none;
     font-size: 14px;
 }
 
-.card__main__title:hover {
+.card__title:hover {
     text-decoration: underline;
 }
 
-.card__main__desc {
+.card__desc {
     color: var(--text-gray);
     font-size: 12px;
     margin: 0;
 }
 
-/* footer */
-
-.card__footer {
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 4;
-}
-
-.card__footer__prices {
+.card__prices {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
 }
 
-.card__footer__prices__price {
+.card__prices__left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card__prices__price {
     color: var(--text-red);
     font-weight: bold;
     font-size: 28px;
-    margin: 0;
 }
 
-.card__footer__prices__info {
+.card__prices__info {
     color: var(--text-gray);
     font-size: 12px;
 }
 
-.card__footer__stock {
+.card__stock {
+    justify-self: center;
+}
+
+.card__stock__text {
     color: var(--text-green);
     font-weight: bold;
-    justify-self: center;
-    margin: 2em;
     text-decoration: none;
 }
 
-.card__footer__stock:hover {
+.card__stock:hover {
     text-decoration: underline;
 }
 
-.card__footer__alzabox {
+.card__footer {
     display: flex;
     color: var(--text-green);
     background-color: var(--bg-lightgreen);
     padding: 0.5em;
     align-items: center;
-    height: fit-content;
     font-size: 12px;
     border-radius: 10px;
     gap: 10px;
     text-decoration: none;
 }
 
-.card__footer__alzabox:hover {
+.card__footer:hover {
     background-color: var(--bg-alzabox-hover);
     text-decoration: underline;
 }
 
-.card__footer__alzabox__title {
+.card__footer__title {
     font-weight: bold;
 }
 
-.card__footer__alzabox__info {
+.card__footer__info {
     color: var(--text-green);
     text-decoration: underline;
 }
@@ -236,7 +226,6 @@ html {
     border-radius: 16px;
     font-weight: bold;
     padding: 0.6em;
-    margin: 1em;
     font-size: 14px;
 }
 
